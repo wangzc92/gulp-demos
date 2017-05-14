@@ -8,6 +8,7 @@
 	<style>
 		*{margin:0;padding:0;}
 		input{display:none;}
+		label{}
 		.container{
 	  		display: flex;
 	  		flex-wrap: wrap;
@@ -19,53 +20,78 @@
 	  		margin: 2px;
 		}
 		
-  		input[id="people"]:checked ~ .container .item:not(.people){display:none;}
-  		
   		input[id="nature"]:checked ~ .container .item:not(.nature){display:none;}
   		
   		input[id="travel"]:checked ~ .container .item:not(.travel){display:none;}
+  		
+  		input[id="shenzhen"]:checked ~ .container .item:not(.shenzhen){display:none;}
+  		
+  		input[id="friends"]:checked ~ .container .item:not(.friends){display:none;}
   		
 	</style>
 </head>
 <body>
 	
-  		<input type="radio" id="people" name="clothing " />
-  		<label for="people">people</label>
-  	
   		<input type="radio" id="nature" name="clothing " />
   		<label for="nature">nature</label>
   	
   		<input type="radio" id="travel" name="clothing " />
   		<label for="travel">travel</label>
   	
+  		<input type="radio" id="shenzhen" name="clothing " />
+  		<label for="shenzhen">shenzhen</label>
+  	
+  		<input type="radio" id="friends" name="clothing " />
+  		<label for="friends">friends</label>
+  	
 	<div class="container">
 		
-  		<div class="item people">
-			<img src="./images/01.jpg" alt="">
-  		</div>
-  		
-  		<div class="item people">
-			<img src="./images/02.jpg" alt="">
+  		<div class="item nature">
+			<img src="http://wangzc.cc/gallery/nature/images/thumbs/01.jpg" alt="">
   		</div>
   		
   		<div class="item nature">
-			<img src="./images/03.jpg" alt="">
+			<img src="http://wangzc.cc/gallery/nature/images/thumbs/02.jpg" alt="">
   		</div>
   		
   		<div class="item nature">
-			<img src="./images/04.jpg" alt="">
+			<img src="http://wangzc.cc/gallery/nature/images/thumbs/03.jpg" alt="">
+  		</div>
+  		
+  		<div class="item nature">
+			<img src="http://wangzc.cc/gallery/nature/images/thumbs/04.jpg" alt="">
   		</div>
   		
   		<div class="item travel">
-			<img src="./images/05.jpg" alt="">
+			<img src="http://wangzc.cc/gallery/travel/images/thumbs/05.jpg" alt="">
   		</div>
   		
   		<div class="item travel">
-			<img src="./images/06.jpg" alt="">
+			<img src="http://wangzc.cc/gallery/travel/images/thumbs/06.jpg" alt="">
   		</div>
   		
   		<div class="item travel">
-			<img src="./images/07.jpg" alt="">
+			<img src="http://wangzc.cc/gallery/travel/images/thumbs/07.jpg" alt="">
+  		</div>
+  		
+  		<div class="item shenzhen">
+			<img src="http://wangzc.cc/gallery/shenzhen/images/thumbs/01.jpg" alt="">
+  		</div>
+  		
+  		<div class="item shenzhen">
+			<img src="http://wangzc.cc/gallery/shenzhen/images/thumbs/02.jpg" alt="">
+  		</div>
+  		
+  		<div class="item shenzhen">
+			<img src="http://wangzc.cc/gallery/shenzhen/images/thumbs/03.jpg" alt="">
+  		</div>
+  		
+  		<div class="item friends">
+			<img src="http://wangzc.cc/gallery/friends/images/thumbs/01.jpg" alt="">
+  		</div>
+  		
+  		<div class="item friends">
+			<img src="http://wangzc.cc/gallery/friends/images/thumbs/02.jpg" alt="">
   		</div>
   		
   	</div>

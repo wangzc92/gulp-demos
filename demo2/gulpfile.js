@@ -23,13 +23,7 @@ gulp.task('bulidHtml', function(){
         .pipe(gulp.dest(distDir)); 
 });
 
-//压缩图片 (未压缩)
-gulp.task('bulidImg', function () {
-    gulp.src([srcDir + '/images/*.png',srcDir + '/images/*.jpg']) 
-        .pipe(gulp.dest(distDir + '/images'));
-});
-
-gulp.task('bulid', ['bulidHtml','bulidImg'], browserSync.reload);
+gulp.task('bulid', ['bulidHtml'], browserSync.reload);
 
 // 开发服务
 gulp.task('dev', function() {
