@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>gallary</title>
+	<% var types = [];
+		for(var i in imgs) {
+			types.push(imgs[i].type)
+		}
+		var type = Array.from(new Set(types));
+	%>
+	<style>
+		*{margin:0;padding:0;}
+		input{display:none;}
+		label{}
+		.container{
+	  		display: flex;
+	  		flex-wrap: wrap;
+		}
+		img{
+	  		height: 200px;
+	  		flex-grow: 1;
+	  		object-fit: cover;
+	  		margin: 2px;
+		}
+		<% for(var i in type) { %>
+  		input[id="<%= type[i] %>"]:checked ~ .container .item:not(.<%= type[i] %>){display:none;}
+  		<% } %>
+	</style>
+</head>
+<body>
+	<% for(var i in type) { %>
+  		<input type="radio" id="<%= type[i] %>" name="clothing " />
+  		<label for="<%= type[i] %>"><%= type[i] %></label>
+  	<% } %>
+	<div class="container">
+		<% for(var i in imgs) { %>
+  		<div class="item <%= imgs[i].type %>">
+			<img src="<%= imgs[i].src %>" alt="">
+  		</div>
+  		<% } %>
+  	</div>
+</body>
+</html>

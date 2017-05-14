@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>gallary</title>
+	
+	<style>
+		*{margin:0;padding:0;}
+		input{display:none;}
+		.container{
+	  		display: flex;
+	  		flex-wrap: wrap;
+		}
+		img{
+	  		height: 200px;
+	  		flex-grow: 1;
+	  		object-fit: cover;
+	  		margin: 2px;
+		}
+		
+  		input[id="people"]:checked ~ .container .item:not(.people){display:none;}
+  		
+  		input[id="nature"]:checked ~ .container .item:not(.nature){display:none;}
+  		
+  		input[id="travel"]:checked ~ .container .item:not(.travel){display:none;}
+  		
+	</style>
+</head>
+<body>
+	
+  		<input type="radio" id="people" name="clothing " />
+  		<label for="people">people</label>
+  	
+  		<input type="radio" id="nature" name="clothing " />
+  		<label for="nature">nature</label>
+  	
+  		<input type="radio" id="travel" name="clothing " />
+  		<label for="travel">travel</label>
+  	
+	<div class="container">
+		
+  		<div class="item people">
+			<img src="./images/01.jpg" alt="">
+  		</div>
+  		
+  		<div class="item people">
+			<img src="./images/02.jpg" alt="">
+  		</div>
+  		
+  		<div class="item nature">
+			<img src="./images/03.jpg" alt="">
+  		</div>
+  		
+  		<div class="item nature">
+			<img src="./images/04.jpg" alt="">
+  		</div>
+  		
+  		<div class="item travel">
+			<img src="./images/05.jpg" alt="">
+  		</div>
+  		
+  		<div class="item travel">
+			<img src="./images/06.jpg" alt="">
+  		</div>
+  		
+  		<div class="item travel">
+			<img src="./images/07.jpg" alt="">
+  		</div>
+  		
+  	</div>
+</body>
+</html>

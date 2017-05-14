@@ -1,0 +1,22 @@
+imgs:
+  img0:
+    type: people
+    src: ./images/01.jpg
+  img1:
+    type: people
+    src: ./images/02.jpg
+  img2:
+    type: nature
+    src: ./images/03.jpg
+  img3:
+    type: nature
+    src: ./images/04.jpg
+  img4:
+    type: travel
+    src: ./images/05.jpg
+  img5:
+    type: travel
+    src: ./images/06.jpg
+  img6:
+    type: travel
+    src: ./images/07.jpg
