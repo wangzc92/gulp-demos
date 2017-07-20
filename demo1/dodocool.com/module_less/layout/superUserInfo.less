@@ -1,0 +1,17 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_acountlayout.less"; //会员中心布局
+@import "../module_less/module/m_acountNav.less"; //会员中心左侧
+@import "../module_less/module/m_form.less"; //表单元素
+.content_wrap{
+	.hd{font-size:@16px;padding:@20px;.border_b;}
+}
+.form_wrap{border:none;padding-top:0;margin-top:0}
+.acount_nav{margin-top:0}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  .content_wrap{
+	.hd{display: none}
+  }
+}
+
+

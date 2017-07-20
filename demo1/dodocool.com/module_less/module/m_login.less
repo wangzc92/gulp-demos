@@ -1,0 +1,59 @@
+//login left
+.login_box{
+   width:@320px;margin:0px auto;
+   .control_box{margin-bottom:@26px;
+      &.erro{margin-bottom:0;
+        input{border-color:@erro;}
+        textarea{border-color:@erro;}
+      }
+      .erro_info{padding:@5px 0 @16px;color:@erro}
+   }
+   input{width:100%;}
+   .rembMe{margin:-10px 0 @26px}
+   .forget_psw{.fr;.link;}
+   .signIn_btn{margin-bottom:@26px;.main_btn;
+   }
+   .register_btn{margin-bottom:@10px;.main_btn;}
+   .verifiCode{//验证码
+      input{width:@220px;}
+      .code{display:inline-block;*display:inline;*zoom:1;.border;vertical-align:top;margin:0 @5px;img{*width:auto;}}
+      .refresh{width:@13px;height:@13px;display:inline-block;vertical-align:middle;.icon_02(-2px,-82px);}
+   }
+   p.cr_ac{margin:-@10px 0 @25px;
+    a{.link}
+   }
+   .other_erro_info{padding:@5px 0 @10px;color:@erro;margin-top:-@20px;}
+}
+//第三方登录
+.other_login{
+   .hd{height:1px;width:100%;position:relative;background:@colorccc;margin-bottom:@22px;
+      i{display: block;position: absolute;width:@26px;height:@26px;.border;border-radius:50%;background: #fff;z-index: 10;top:50%;left:50%;margin-left:-@13px;margin-top:-@13px;text-align: center;line-height:@23px;font-size:@14px}
+   }
+   .bd{text-align:center;
+      p{margin-bottom:@10px;}
+      a{width:@34px;height:@34px;.lineBlock;margin-right:@7px;color:#fff;.borderRa;text-align:center;line-height:@36px;font-size:@24px;
+        &.facebook{background:#344f81}
+        &.google{background:#e54836}
+        &.twitter{background:#1ebef0}
+        &.vk{background:#19597f}
+      }
+   }
+}
+.login_tips{
+  width:@378px;margin:0 auto;
+  h3{font-size:@20px;color:@color333;line-height:@25px;margin-bottom:20px;}
+  li{padding-left:@10px;i{width:8px;height:8px;display:inline-block;vertical-align:middle;background:@colorccc;margin-right:@15px}
+  margin-bottom:@23px}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  .login_box{padding-bottom:@15px;border-bottom:1px dotted @colorccc;
+     .verifiCode{//验证码
+      input{width:60%}
+     }
+  }
+  .login_box,.login_tips{
+   width:100%;
+  }
+  .login_tips{margin-top:@15px}
+  }

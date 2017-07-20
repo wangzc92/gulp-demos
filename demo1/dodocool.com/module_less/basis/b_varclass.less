@@ -1,0 +1,76 @@
+//========== 变量Class ==========//
+
+//浮动
+.fl(){float:left;}
+.fr(){float:right;}
+.fl{float:left;}
+.fr{float:right;}
+//边框
+.border(@px:1px; @style:solid; @color:#ccc;){
+  border:@px @style @color;
+}
+.border_t(@px:1px; @style:solid; @color:#ccc;){
+  border-top:@px @style @color;
+}
+.border_r(@px:1px; @style:solid; @color:#ccc;){
+  border-right:@px @style @color;
+}
+.border_b(@px:1px; @style:solid; @color:#ccc;){
+  border-bottom:@px @style @color;
+}
+.border_l(@px:1px; @style:solid; @color:#ccc;){
+  border-left:@px @style @color;
+}
+
+//圆角
+.borderRa(@px:4px;){
+  border-radius:@px;
+}
+.borderRa_lt(@px:4px;){
+  border-top-left-radius:@px;
+}
+.borderRa_rt(@px:4px;){
+  border-top-right-radius:@px;
+}
+.borderRa_lb(@px:4px;){
+  border-bottom-left-radius:@px;
+}
+.borderRa_rb(@px:4px;){
+  border-bottom-right-radius:@px;
+}
+//主按钮,次按钮
+.main_btn(){
+  background:@mbtn_bg;border:1px solid @mbtn_bdr;color:@mbtn_font;border-radius:20px;
+  &:hover{background:@mbtn_bg_hover;border:1px solid @mbtn_bdr_hover;color:@mbtn_font_hover;}
+}
+.sub_btn(){
+  background:@sbtn_bg;border:1px solid @sbtn_bdr;color:@sbtn_font;
+  &:hover{background:@sbtn_bg_hover;border:1px solid @sbtn_bdr_hover;color:@sbtn_font_hover;}
+}
+
+//水平并排相关
+.lineBlockBox(){font-size:0;letter-spacing:-3px;word-spacing:-3px;
+  >*{.lineBlock;}
+}
+.lineBlock(@align:middle;){font-size:@12px;letter-spacing:0;word-spacing:0;vertical-align:@align; display:inline-block; *display:inline; *zoom:1;}
+.lineBlockBoxs(@align:left){display:table; width:100%;  text-align:@align; font-size:0; letter-spacing:-3px;  word-spacing:-3px;
+  >*{.lineBlock;}
+}
+//处理超出字符
+.strLen(){text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.strLen2(@line:2){
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: @line; //显示2行  多余部分...
+  -webkit-box-orient: vertical;
+}
+.firstLetter(){ & >* :first-letter{text-transform:capitalize;}
+}
+//动画时间
+.animate(@time:0.5s;){transition:all @time; -moz-transition:all @time; -o-transition:all @time; -ms-transition:all @time; -webkit-transition:all @time;}
+.link(){
+  color:@c;
+  &:hover{text-decoration:underline;}
+}
+.clearfix(){clear:both; zoom:1;&:after{clear:both; display:block; height:0; font-size:0; content:"."; visibility:hidden;}}

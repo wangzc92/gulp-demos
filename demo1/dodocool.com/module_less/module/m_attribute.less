@@ -1,0 +1,83 @@
+//选择商品属性样式。
+// <div class="attribute">
+// 	  <p class="tt">color:<span>black</span></p>
+// 	  <ul class="lineBlockBox select_color">
+// 	    <li class="active black"><span>black</span><i></i></li>
+// 	    <li class="red"><span>red</span><i></i></li>
+// 	    <li class="yellow disabled"><span>yellow</span><i></i></li>
+// 	  </ul>
+// 	  <p class="tt">Choose your country:<span>United States</span></p>
+// 	  <ul class="lineBlockBox select_country">
+// 	    <li class="active"><span>united States</span><i></i></li>
+// 	    <li><span>japan</span><i></i></li>
+// 	    <li><span>italy</span><i></i></li>
+// 	    <li class="disabled"><span>Italy</span><i></i></li>
+// 	  </ul>
+// 	  <a class="yellow_btn" href="javascript:void(0)">Buy at Amazon</a>
+// </div>
+@import "m_more_country"; //国旗
+.attribute{
+	.tt{padding:@10px 0;color:@color666;margin-top:@20px;
+       span{color:@color333;margin-left:@5px;display: inline-block;}
+	}
+	ul{
+		li{
+			width:auto;
+			position:relative;border:1px solid @colorccc;margin-right:@20px;padding:@4px @20px;cursor: pointer;margin-bottom:@15px;
+			
+			i{display:block;position:absolute;}
+			&.active{border-color:@yellow2;
+				i{display:block;width:14px;height:14px;.icon_02(-102px,-20px);position:absolute;right:-1px;bottom:-1px;}
+			}
+			&:hover{border-color:@yellow2;}
+			&.disabled{border-style:dotted;color:@color999;cursor:not-allowed;
+			   &:before{content:'';width:100%;height:100%;display: block;position:absolute;left:0;top:0;background:url('../icon/cannotdot.png');}
+               &:hover{border-color:@colorccc}
+			}
+        }
+		&.select_color{
+			li{width:@32px;height:@32px;padding:1px;
+			   span{display:block;width:100%;height:100%;text-indent:-999em;overflow:hidden;}
+			   &.black,&.Black{span{background:@black}}
+			   &.red,&.Red{span{background:@red}}
+			   &.yellow,&.Yellow{span{background:@yellow2}}
+			   &.pink,&.Pink{span{background:#ffc0cb}}
+			   &.blue,&.Blue{span{background:#0000FF}}
+			   &.dark.blue,&.Dark.Blue{span{background:#5186E2}}
+			   &.brown,&.Brow{span{background:#5C4033}}
+			   &.white,&.White{span{background:#fff}}
+			   &.silver,&.Silver{span{background:#C0C0C0}}
+			   &.golden,&.Golden{span{background:#DAA520}}
+			   &.grey,&.Grey{span{background:#D3D3D3}}
+			   &.gold,&.Gold{span{background:#DAA520}}
+			   &.green,&.Green{span{background:#008000}}
+			   &.beige,&.Beige{span{background:#F5F5DC}}
+			   &.rose,&.Rose{span{background:#FFE4E1}}
+			   &.grey,&.Grey{span{background:#D3D3D3}}
+			   &.Branco,&.branco{span{background:#fff}}
+			   &.Preto,&.preto{span{background:#000000}}
+			   &.Cinzento,&.Cinzento{span{background:#C0C0C0}}
+			   &.Amarelo,&.amarelo{span{background:#FFFF01}}
+			   &.Rosa,&.rosa{span{background:#FF6FC7}}
+			   &.Azul,&.aAzul{span{background:#22238F}}
+			   &.Rosa,&.rosa{span{background:#FF6FC7}}
+			   &.Azul.Escuro,&.azul.escuro{span{background:#1C1853}}
+			   &.Vermelho,&.vermelho{span{background:#AF3D44}}
+			   &.gray,&.Gray{span{background:#D3D3D3}}
+            }
+		}
+		&.select_country{width:86%;}
+	}
+    .yellow_btn{background:@yellow;display:block;width:100%;line-height:@60px;height:@60px;margin-top:@20px;.borderRa;color:#fff;text-align:center;font-size:@18px;
+        &:hover{background:@yellow2;color:#fff;}
+    }
+    .choise_buybtn{width:86%;position:relative;
+    	ul{width:100%;position: absolute;left:0;top:@60px;background:#f5f5f5;display:none;z-index:10;max-height:@180px; overflow: auto;overflow-x:hidden; 
+          &.active{display:block}
+          li{margin:0;border:0;padding:@6px @40px;
+          	&:hover{background:#dddddd}
+            i{display:inline-block;position:static;width:@15px;height:@15px;margin-right:@15px;vertical-align:top}
+          }
+    	}
+    }
+}

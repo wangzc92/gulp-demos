@@ -1,0 +1,49 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/module/m_login.less"; //登录
+@import "../module_less/module/m_pullDown_country.less"; //下拉选择国家组件
+#main .content{padding-bottom:@30px;}
+//分类导航
+.login_wrap{
+	margin:@30px auto;padding:@40px @40px @30px;
+   .tt_hd{
+      margin-bottom:@60px;
+      h3{font-size:@22px;color:@color333;.fl}
+      .tag{.fr;color:@color999;
+         i{.lineBlock(middle);width:@16px;height:@20px;.icon_02(-14px,-78px);margin-right:@5px}
+      }
+   }
+   .bd{width:100%;}
+}
+.col_5{width:50%;vertical-align:top;position:relative;
+      .line{width:1px;height:@250px;background:@colorccc;overflow:hidden;position:absolute;right:0;top:0;display:block;}
+}
+@media(max-width:320px)
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  #main .content{padding-bottom:0}
+  .col_5{
+  	 .line{display:none}
+  }
+  .login_wrap{
+  	margin-top:60px;
+	  margin:@15px auto;padding:@15px;border:none;
+   .tt_hd{
+      margin:0 -@30px @26px;padding:0 @30px @15px;border-bottom:1px solid @colorccc;
+   }
+  }
+  .col_5{width:100%;vertical-align:top}
+}
+@media(max-width:1200px)
+{
+ .content.w{padding-left:@15px;padding-right:@15px;}
+}
+
+
+

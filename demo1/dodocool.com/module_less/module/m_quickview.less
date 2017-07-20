@@ -1,0 +1,34 @@
+//快速购买
+@import "m_attribute"; //商品详情选择商品属性。
+//快速购买点击按钮。
+// <span class="quick_view"><i></i>Quick view</span>
+.quick_view{display:block;width:100%;height:30px;background:#e5e5e5;position:absolute;text-align:center;line-height:30px;font-size:12px;color:@color333;bottom:0px;transition:all 0.3s;cursor:pointer;display:none;
+ i{display:inline-block;width:30px;height:15px;.icon_02(-38px,-93px);vertical-align:middle;margin-right:@10px}
+}
+.quick_view:hover{width:100%;left:0;}
+.bm_quickview{
+	.hd{border:none;
+    p{color:@f01;font-size:@16px;}
+    p.sub_title{font-size:@12px;margin-top:@8px;}
+  }
+	.pic{.fl;max-width:@280px;text-align:center;background:#fff;
+          img{max-width:@280px;height:auto;display:inline-block;}
+	   }
+    .attribute{margin-left:@280px;background:#fff;
+    	.tt{margin-top:0}
+    	li{margin-bottom:@10px}
+  }
+}
+@media(min-width:320px) and (max-width:680px)
+{
+  .bm_quickview{
+	.pic{max-width:@280px;text-align:center;float:none;margin:0 auto;
+          img{max-width:@280px;height:auto;display:inline-block;}
+	   }
+    .attribute{margin-left:0;
+    	.tt{margin-top:0}
+    	li{margin-bottom:@10px}
+        .select_country li{width:auto}
+	}
+  }
+}	

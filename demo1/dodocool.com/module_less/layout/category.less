@@ -1,0 +1,139 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_product.less"; //产品列表
+@import "../module_less/basis_module/bm_dialog.less"; //弹窗组件
+@import "../module_less/module/m_quickview.less"; //快速购买
+#main{padding:0;}
+.banner{
+  .scroll_wrap{position:relative;}
+}
+//分类导航
+.tab_nav_container{max-width:1200px;margin:0 auto;
+  .scroll_wrap{position:relative;width:100%;height:@120px;overflow:hidden;}
+	.tab_nav{
+     position:absolute;overflow:scroll;
+   	   li{min-width:@100px;padding:@7px @43px @8px;text-align:center;cursor:pointer;border-bottom:2px solid @cf3;
+        border-right:2px solid #fff;background:@cf3;
+        &:last-of-type{border-right:none;width:@147px;}
+          span{display:inline-block;width:@64px;height:@63px;}
+          &.cr_icon_1770{
+          	// span{.icon_tab(-64px,0)}
+          	&.active,&:hover{
+          		// span{.icon_tab(0,0)}
+          		border-bottom-color:@c;
+              background:#fff;
+          	}
+          }
+          &.cr_icon_1923{
+            // span{.icon_tab(-64px,-252px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-252px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.cr_icon_1924{
+            // span{.icon_tab(-64px,-189px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-189px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          	
+          }
+          &.cr_icon_1926{
+            // span{.icon_tab(-64px,-63px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-63px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.cr_icon_1362{
+            // span{.icon_tab(-64px,-126px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-126px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.cr_icon_2392{
+            // span{.icon_tab(-64px,-315px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-315px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.cr_icon_2941{
+            // span{.icon_tab(-64px,-315px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-315px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.cr_icon_2953{
+            // span{.icon_tab(-64px,-315px)}
+            &.active,&:hover{
+              // span{.icon_tab(0,-315px)}
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          p{font-size:@14px;color:#000;padding:@10px 0}
+          &.active,&:hover{
+          	p{color:#000;}
+          }
+   	   } 
+	}
+}
+.tag_nav{
+	padding-top:20px;
+	ul{
+		li{font-size:@14px;color:@color333;padding:20px;}
+	}
+}
+.tab_container{overflow:hidden;}
+.tab_info{text-align:center;
+   .category_tt{display:inline-block;padding:50px 0 40px;
+      h3{font-size:@24px;color:@color333;margin-top:@20px;}
+      p{padding:@8px 0;font-size:@18px;}
+   }
+   .view_more{
+    width:130px;margin:0 auto;padding:@12px @24px;.main_btn;font-size:@14px;margin-bottom:@20px;cursor:pointer;
+   }
+}
+
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+   .tab_info{
+	   .category_tt{padding:30px 0 20px;}
+   }
+   .tag_nav{
+		padding-top:10px;
+		ul{
+			li{font-size:@14px;color:@color333;padding:10px;}
+		}
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  //html{font-size:16px;}
+  #main{padding:0 0 0}
+  .banner{}
+  .tab_nav_container{
+       .scroll_wrap{height:@50px;line-height:@50px;
+        p{padding:0}}
+       .tab_nav{
+         li{padding:0;height:@48px;
+            span{display: none}
+            p{padding:0}
+         }
+       }
+   }
+}	
+
+
+
+
+

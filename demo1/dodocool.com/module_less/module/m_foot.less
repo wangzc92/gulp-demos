@@ -1,0 +1,140 @@
+html{height:100%;}
+body{min-height:100%;padding-bottom:@177px;position:relative;}
+.footer{position:absolute;left:0;bottom:0;width:100%;}
+.fol_new{background:@cf3;padding:@25px 0;
+     h5{font-size:@12px;padding:@20px 0;}  
+}
+.follow_us{
+   width:40%;
+   margin-right:10%;
+   margin-top:@6px;
+   text-align:center;
+   *padding-right:0;
+   *width:30%;
+   .fr;
+}
+//follow us组件样式可以独立出去。
+.m_follow_us{
+   text-align:left;
+   display:inline-block;
+   a{font-size:@20px;padding:@11px @10px @7px @10px;margin-right:@10px;color:#fff;
+     &.google{background:#4e4f54}
+     &.twitter{background:#62cdf1}
+     &.youtube{background:#f26261}
+     &.facebook{background:#507cbd}
+   }
+}
+.newsLetter{
+   .fl;
+   
+   width:40%;
+   margin-left:10%;
+   text-align:center;
+   border-right:1px solid @bdc;
+   *padding-right:0;
+}
+.contactUs{
+    display:none;
+   .fr;
+   
+   width:33.3%;
+   min-height:@92px;
+   text-align:center;
+   .m_contactUs{display:inline-block;text-align:left;}
+   border-right:1px solid @bdc;
+   *padding-right:0;
+   h5{font-size:@14px;color:#666;padding-left:@20px;}
+   p{padding-left:@20px;margin-bottom:@10px;
+     span{
+      &:first-child{margin-right:@10px}}
+   }
+
+}
+//newsLetter组件样式可以独立出去。
+.m_newsLetter{
+   width:80%;display:inline-block;text-align:left;
+   .sendE_btn{}
+   .input_box{
+    input{width:70%;}
+    button{width:20%;}
+    p.erro_info{position:absolute;}
+   }
+}
+.fn_copy{border-top:1px solid @bdc;height:@88px;padding:@20px 0;background:@cf3;
+}
+.foot_nav{
+   width:100%;text-align:center;font-size:@12px;
+   span{margin:@5px}
+   a{display:inline-block;}
+}
+.copyRight{
+   width:100%;text-align:center;
+   margin-top:@10px;margin-bottom:@10px;
+   span{margin-left:@20px;}
+   a{display:inline-block;}
+}
+
+// //========== 自适应字体基数 ==========//
+// @media(max-width:320px)
+// {//iPhone5
+   
+// }
+// @media(min-width:321px) and (max-width:639px)
+// {//手机竖屏
+//   //html{font-size:16px;}
+// }
+@media(min-width:320px) and (max-width:767px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+  body{padding-bottom:@250px;}
+  .m_newsLetter{width:auto;
+    .input_box{
+    button{width:30%;}
+   }
+  }
+  .fol_new{background:none;padding:0}
+  .follow_us{font-size:@12px;float:none;width:100%;;background:@cf3;padding:0;text-align:center;padding:@15px 0;margin-bottom:@2px;margin-top:0;}
+  .newsLetter{float:none;width:100%;background:@cf3;padding:0;text-align:center;padding:@15px 0;margin-bottom:@2px;margin-left:0;}
+  .contactUs{float:none;width:100%;background:@cf3;padding:0;text-align:center;padding:@15px 0;}
+  .fn_copy{height:auto;}
+  .copyRight,.foot_nav{float:none;width:100%;text-align:center;background:@cf3;line-height:@20px;padding-right:0;
+   }
+  .copyRight{
+    font-size:@12px;
+    margin-top:@8px;
+    span{display:block;margin:0}
+  }
+}
+ @media(min-width:768px) and (max-width:950px)
+ {//平板竖屏
+   //html{font-size:18px;}
+ }
+  @media(min-width:320px) and (max-width:396px)
+ {//平板竖屏
+   //html{font-size:18px;}
+   body{padding-bottom:@270px;}
+  .input_box{
+    .text{width:@172px;}
+  }
+}
+// @media(min-width:768px) and (max-width:1023px)
+// {//平板竖屏
+//   //html{font-size:18px;}
+// }
+// @media(min-width:1024px) and (max-width:1200px)
+// {//平板横屏
+//   //html{font-size:18px;}
+// }
+// @media(min-width:1200px) and (max-width:1600px)
+// {//笔记本
+//   //html{font-size:20px;}
+// }
+// @media(min-width:1600px)
+// {//台式机
+//   //html{font-size:22px;}
+// }
+ @media(max-width:1200px)
+{ //手机横屏与平板
+   .fn_copy .w{padding:0 @15px}
+
+}

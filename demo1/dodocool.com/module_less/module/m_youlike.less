@@ -1,0 +1,47 @@
+//you may also like
+.youlike{
+   padding-bottom:@60px;
+   h3.hd{color:@color333;font-size:@18px;padding:@22px @15px;border-bottom:1px solid @colorccc;}
+   .listMoveWarp{width:100%;height:280px;overflow:hidden;position:relative;margin-top:@30px}
+   
+   .leftArr,.rightArr{display: block;width:46px;height:46px;margin-top:-70px;position:absolute;top:50%;z-index:9;border-radius: 6px 6px 6px 6px;
+   	&:hover{background-color:#fff;}
+   }
+   .leftArr{left:0;.icon_02(-63px,-59px);}
+   .rightArr{right:0;.icon_02(-113px,-59px);}
+   .moveBox{position:absolute;left:0;top:0}
+   //产品容器
+	.productClass{width:@220px;height:@260px;position:relative;overflow:hidden;margin:0 @10px 0 @10px;
+	    .productImg{display:block;text-align:center;
+            width:220px;height:220px;overflow:hidden;
+            &{
+            	img{max-width:100%;.animate;display:block}
+            }
+            &:hover{
+            	img{transform:translateY(-10px);-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);-o-transform:translateY(-10px)}
+            }
+	    }
+	    .productTitle{font-size:@14px;color:@color666;width:100%;height:18px;margin-top:@10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+	}
+	///////拖动 滑块///////
+	.feed-scrollbar{display:block;font-size: 0;height:6px;left:0;bottom:0;position:absolute;z-index:20;width:1200px;background:#fff;
+	   .feed-scrollbar-track{background-color:#eee;border-radius:4px;display:block;height:1px;margin: 0;position: relative;top:2px;width:100%;
+	   }
+	   .feed-scrollbar-thumb{background-color:#aaa;border-radius:6px;cursor:pointer;display:none;height: 6px;left: 0;margin: 0;position: absolute;top:-2px;width:100%;
+	   }
+	   .block{display:block;}
+	}
+	.listMoveWarp{
+		&:hover{
+			.feed-scrollbar-thumb{display:block;}
+		}
+	}
+}
+
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+   .youlike{
+       h3.hd{text-align:center}
+       .leftArr,.rightArr,.feed-scrollbar{display:none}
+   }
+}

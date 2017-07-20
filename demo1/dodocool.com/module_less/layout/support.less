@@ -1,0 +1,141 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_dialog.less"; //弹窗组件
+@import "../module_less/basis_module/bm_dialog_code.less"; //验证码弹层
+#main .content{padding-bottom:@30px;}
+.banner{
+   .scroll_wrap{position: relative;}
+ }
+.content{
+  .crumbs{display:none;}
+}
+//分类导航
+.support_nav_bar{background:@cf3;
+  .support_center{text-align:center;padding:@55px 0;
+     h5{font-size:@30px;color:@color666;margin-right:@80px;line-height:@40px}
+     h5,.input_box{display:inline-block;vertical-align:middle;text-transform: uppercase;width:auto;}
+     .input_box{display:none;
+        .text{.border;border-right:none;width:@272px}
+        .submit_btn{width:38px;
+           i{font-size:@18px}
+        }
+     }
+  }
+  .scroll_wrap{position:relative;width:100%;height:@52px;overflow:hidden;}
+	.tab_nav{
+     position:absolute;
+	   min-width:@519px;overflow:scroll;
+   	   li{position:relative;width:@170px;padding:@10px 0;text-align:center;cursor:pointer;border-bottom:2px solid @cf3;border-right:2px solid #fff;
+        &:last-of-type{border-right:none;}
+        a:before{content:'';width:100%;height:100%;position:absolute;left:0;top:0;}
+          span{display:inline-block;width:30px;height:30px; vertical-align: middle;margin-right:@5px}
+          &.li1{
+          	span{.icon_02(-197px,0)}
+          	&.active,&:hover{
+              border-bottom-color:@c;
+              background:#fff;
+          	}
+          }
+          &.li2{
+          	span{.icon_02(-197px,-30px)}
+          	&.active,&:hover{
+          		border-bottom-color:@c;
+              background:#fff;
+          	}
+          }
+          &.li3{
+          	span{.icon_02(-197px,-60px)}
+          	&.active,&:hover{
+          		border-bottom-color:@c;
+              background:#fff;
+          	}
+          }
+          p{font-size:@12px;color:#000;display: inline-block;vertical-align:middle;}
+          &.active,&:hover{
+          	p{color:#000;}
+          }
+   	   } 
+	}
+}
+.tag_nav{
+	padding-top:20px;
+	ul{
+		li{font-size:@14px;color:@color333;padding:20px;}
+	}
+}
+.tab_container{overflow:hidden;margin-top:@10px;}
+.tab_info{text-align:center;
+   .category_tt{display:inline-block;padding:50px 0 40px;
+      h3{font-size:@24px;color:@color333;}
+      p{padding:@10px 0}
+   }
+   .product_container{margin-top:@20px;}
+}
+//产品展示
+.product{
+   width:100%;padding:0 @16px;
+   li{width:23.35%;padding:@15px 0;text-align:center;margin-right:2.2%;margin-bottom:2.2%;border:1px solid #eee;
+     &:nth-of-type(4n){margin-right:0;}
+     .product_img{display:block;padding:0 20px;min-height:100px;width:100%;
+      background:url('../icon/loading.gif') no-repeat center center;
+      img{width:100%;.animate;}
+     }
+     &:hover{
+       .product_img{img{transform:translateY(-10px);-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);-o-transform:translateY(-10px);}
+     }
+     }
+     h3{padding:10px;text-align:left;width:100%;height:50px;line-height:20px; overflow:hidden;font-size:@14px}
+   }
+}
+//弹窗里面的内容
+.downLoad_list{
+  .bd{dl{line-height:@20px;margin-bottom:10px;
+          dt{font-size:@16px;color:@color333}
+          dd{.border_b;margin:5px 24px 5px;padding:10px 0;
+            i{.icon_02(0,-105px);display: inline-block;vertical-align:top;width:@15px;height:@15px;margin-left:@10px;}
+          }
+        }}
+}
+@media(max-width:320px)
+{//iPhone5
+	.product{
+	 li{width:100%;margin-right:0;margin-bottom:1%;}
+	}
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+   .tab_info{
+	   .category_tt{padding:30px 0 20px;}
+   }
+   .tag_nav{
+		padding-top:10px;
+		ul{
+			li{font-size:@14px;color:@color333;padding:10px;}
+		}
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .banner{}
+	.product{
+	 li{width:49%;margin-right:2%;margin-bottom:2%;
+    &:nth-of-type(2n){margin-right:0;}
+     .product_img{background-size:80% auto}
+	   }
+  }
+  .support_nav_bar{background:@cf3;
+    .support_center{text-align:center;padding:@55px 0;
+       h5{margin-right:0;margin-bottom:@10px}
+       
+      
+ }
+ .input_box{
+    .text{width:@210px}
+ }
+
+}	
+}
+
+
+
+
+

@@ -1,0 +1,21 @@
+// <div class="bm_dialog">
+// 	   <s></s>
+// 	   <div class="dialog">
+// 	      <div class="hd"><h3></h3><span class="close"></span></div>
+// 	      <div class="bd"></div>
+// 	      <div class="ft"></div>
+// 	   </div>
+// </div>
+//公共弹窗样式
+.bm_dialog{position:fixed;width:100%;height:100%;top:0;left:0;text-align:center;display:none;z-index:30;
+    s{display:inline-block;width:1px;height:100%;vertical-align:middle;opacity:0;font-size:0}
+    .dialog{width:80%;min-width:@280px;max-width:@640px;display:inline-block;.borderRa;background:#fff;text-align:left;vertical-align:middle;position: relative;z-index:30;
+        .hd{padding:@12px @40px @12px @12px;position:relative;font-size:@18px;border-bottom:1px solid @colorccc;
+        	.close{position:absolute;right:@12px;top:@12px;cursor: pointer;}
+        	p{width:80%;.strLen()}
+        }
+        .bd{position:relative;padding:@15px;min-overflow:auto;overflow-x:hidden;min-height:@270px;}
+        .load_bg{position:absolute;width:100%;height:100%;left:0;top:0;background:url(../icon/loading2.gif) no-repeat center center;}
+        .ft{height:@10px}
+    }
+}

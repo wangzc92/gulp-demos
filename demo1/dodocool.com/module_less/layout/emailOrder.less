@@ -1,0 +1,58 @@
+@import "../module_less/basis/b_var.less"; //变量集
+
+//===================邮件订阅页面==============================
+.Email_order{
+  h2{background:url(../icon/border-line_bg.png) left bottom repeat-x;padding:10px 0px 33px 20px;margin-bottom:55px;}
+  .container_wrap{padding:0 70px 60px;background:url(../icon/border-line_bg.png) left bottom repeat-x;}
+  p.p1{font-size:@14px;margin-bottom:5px;color:#333;font-weight:bold;}
+  p.p2{
+    margin-bottom:10px;
+    a{color:#666;font-size:@16px;font-weight:bold;margin-right:10px;}
+  }
+  .ensure_email{font-size:@12px;padding:10px 0;
+     a{color:#333;padding:0 5px}
+  }
+  b.p3{display:block;margin-top:40px;font-size:@14px;;margin-bottom:20px;}
+  .order_list{
+    li{position:relative;float:left;margin-left:5px;margin-right:12px;margin-bottom:18px;cursor:pointer;overflow:hidden;width:31%;
+      .selectedAC{
+        position:absolute;left:0px;top:0px;width:100%;height:100%;display:block;background-color:rgba(0,0,0,0.3);
+        &:after{content:"";position:absolute;left:75px;top:40px;width:75px;height:75px;}
+      }
+      a.selectOrange{color:#ff9900} 
+      img{width:220px;height:150px;}
+    }
+  }
+  .email_BannerColor{li{border:0;}}
+  .subBotInp{font-size:0;text-align:center;
+    margin-top:30px;text-align:center;
+    .email_wrap{.lineBlock}
+  }
+  .emailSub{
+    position:fixed;top:50%;margin-top:-111px;left:50%;margin-left:-444px;padding-right:50px;width:888px;background-color:#fff;border-radius:4px;;
+    padding-left:230px;padding-top:45px;padding-bottom:30px;z-index:110;display:none;text-align:left;
+    em{position:absolute;right:15px;top:15px;width:15px;height:15px;cursor:pointer; background:url("../icon/icon_small.png") no-repeat -140px -70px; }
+    .emIco{position:absolute;left:45px;top:35px;width:140px;height:140px;}
+    b{font-size:@22px;font-weight:normal;}
+    p{font-size:@12px;margin-top:20px;line-height:22px;}
+  }
+}
+ @media(max-width:1200px)
+{ //手机横屏与平板
+   .Email_order.w{padding:0 @15px;}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+  #main .content{padding-bottom:@40px}
+  .Email_order{
+    .container_wrap{padding:0 @15px @30px}
+    .order_list{
+      li{width:40%;}
+    }
+  }
+}
+
+
+
+

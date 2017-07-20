@@ -1,0 +1,42 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_acountlayout.less"; //会员中心左右布局
+@import "../module_less/module/m_acountNav.less"; //会员中心左侧
+@import "../module_less/module/m_form.less"; //表单元素
+@import "../module_less/module/m_pullDown_country.less"; //下拉选择国家组件
+.content_wrap{
+	.hd{font-size:@16px;padding:15px;.border_b;}
+}
+.edit_photo{
+
+	.photo{width:@120px;height:@120px;text-align:center;line-height:@120px;
+		img{max-width:100%;max-height:100%;display: inline-block; vertical-align: middle;
+		:before{content:'';display:inline-block;vertical-align: middle;width:1px;height:100%;}
+	}
+	}
+	.erro_info{color:@erro;padding:5px 0;}
+	.edit_btn{padding:0 20px;height:@35px;line-height:@35px;display:inline-block;.border;.borderRa;margin-left:20px;background:@cf5;vertical-align:middle;position:relative;cursor: pointer;font-size:@12px;
+     input{width:100% !important;height:100% !important;opacity:0;position: absolute;left:0;top:0}
+	}
+}
+.control_box{
+	.m_pullDown_country{width:40%;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;cursor:pointer;}
+} 
+.form_wrap{border:none;padding-top:0;margin-top:0}
+@media(min-width:414px) and (max-width:768px)
+{ //手机横屏与平板
+	.edit_photo{.edit_btn{line-height:@60px;}}
+}
+ @media(min-width:320px) and (max-width:414px)
+{ //手机横屏与平板
+	.edit_photo{.edit_btn{line-height:@48px;}}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  .content_wrap{
+	.hd{display: none}
+  }
+  .control_box{
+	.m_pullDown_country{width:100%;}
+  } 
+}
+

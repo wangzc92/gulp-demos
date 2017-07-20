@@ -1,0 +1,55 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_acountlayout.less"; //会员中心布局
+@import "../module_less/module/m_acountNav.less"; //会员中心左边栏
+//欢迎信息
+.welcome_info{
+	.border_b;padding:@20px;
+	.smile{display:none;width:@77px;height:@70px;background:url(../icon/smile.jpg) no-repeat left center;.fl;margin-left:@31px}
+	.info{
+		p:first-of-type{display:none;}
+        p.tt{font-size:@18px;color:@color666;}
+	}
+}
+//我的信息
+.myinfo{min-height:@400px;padding:@30px;margin-top:18px;border-color:#eee;
+   .photo{width:@120px;height:@120px;.fl}
+   .detail_info{margin-left:@140px;margin-bottom:@20px;
+   	  li{margin-bottom:@18px;font-size:@14px;width:100%;
+   	  	 lable{width:@90px;text-align:right;color:@color666;font-weight:bold;.fl}
+         .col-5{width:50%;white-space:nowrap;vertical-align:top}
+         .one_col{white-space:nowrap;}
+         em{display:block;margin-left:@120px;white-space:normal;word-break:break-all;}
+   	  }
+   }
+   .edit_btn{margin:@19px 0 0 @180px;}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+ 
+  //欢迎信息
+	.welcome_info{
+		padding:@20px;margin-top:@45px;
+		.smile{width:@77px;height:@70px;margin-left:0}
+		.info{
+			p{padding-bottom:10px;line-height:25px}
+	        p.tt{font-size:@18px;color:@color666;}
+		}
+
+	}
+	//我的信息
+	.myinfo{
+	   padding:@20px;margin-top:18px;
+	   .photo{width:@80px;height:@80px;.fl}
+	   .detail_info{margin-left:@90px;
+	   	  li{margin-bottom:0;font-size:@14px;width:100%;
+	   	  	 lable{width:@80px;}
+	         .col-5{width:100%;margin-bottom:@18px;}
+	         em{margin-left:@90px;}
+	   	  }
+	   }
+	   .edit_btn{width:100%;padding:0;margin:@19px 0 0 0px;}
+	}
+}
+
+
+

@@ -1,0 +1,46 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_tabnav.less"; //tab切换导航样式
+@import "../module_less/basis_module/bm_product.less"; //产品列表
+@import "../module_less/basis_module/bm_dialog.less"; //弹窗组件
+@import "../module_less/module/m_quickview.less"; //快速购买
+#main .content{padding:0 0 @16px;}
+.tag_nav{
+	padding-top:20px;
+	ul{
+		li{font-size:@14px;color:@color333;padding:20px;}
+	}
+}
+.tab_nav_container{background:#fff;
+  .tab_nav{
+       li{a{border-bottom:2px solid #fff;}} 
+  }
+}
+.tab_container{overflow:hidden;margin-top:@16px;}
+.tab_info{text-align:center;
+   .category_tt{display:inline-block;padding:50px 0 40px;
+      h3{font-size:@24px;color:@color333;}
+      p{padding:@10px 0}
+   }
+}
+
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+   .tab_info{
+	   .category_tt{padding:30px 0 20px;}
+   }
+   .tag_nav{
+		padding-top:10px;
+		ul{
+			li{font-size:@14px;color:@color333;padding:10px;}
+		}
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  //html{font-size:16px;}
+  #main .content{padding:0;}
+}	
+
+
+
+

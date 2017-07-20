@@ -1,0 +1,184 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/module/m_banner.less"; //banner轮播图样式
+@import "../module_less/module/m_star.less"; //评分五角星
+@import "../module_less/module/m_attribute.less"; //商品详情选择商品属性
+@import "../module_less/module/m_youlike.less"; //你可能喜欢
+@import "../module_less/basis_module/bm_dialog.less"; //弹框样式
+@import "../module_less/basis_module/bm_askquestion.less"; //弹框样式
+@import "../module_less/basis_module/bm_dialog_code.less"; //验证码弹层
+//图片滚动
+#main .banner{max-width:none;}
+.banner{
+  li{
+    img{max-width:auto;max-height:100%;}
+    &:after{width:0;height:100%;font-size:0;vertical-align:middle; content:''; display:inline-block;}
+  }
+}
+//商品图片区
+.product_swiper{display:none;position:fixed;left:0;top:0;bottom:0;right:0;z-index:99999;padding:0;background:#fff;
+  .close_btn{display:block}
+}
+.product_showcase{padding:@30px 0 @40px;}
+
+.product_showcase{
+   .product_container{margin:0 @378px 0 @70px;}
+   .product_left_bar{width:@70px;float:left;}
+   //商品展示左侧滚动栏目
+   .showCaseSmall_box{width:100%;height:545px;overflow:hidden;
+      .moveLeftClick,.moveRightClick{width:100%;text-align:center;display:block;
+         i{.icon_02(0,-120px);display:inline-block;width:26px;height:13px}
+      }
+      .moveRightClick{
+        padding-top:8px;
+        i{.icon_02(0,-135px);}
+      }
+      .productSmallPic{position:relative;width:100%;height:470px; overflow: hidden;}
+      .moveBox{position:absolute;left:0;top:0}
+      li{.border;width:69px;height:69px;margin:9px 0;
+        &.cpActive{border-color:@origin}
+        &:hover{border-color:@origin}
+      }
+   }
+   .product_pic_wrap{text-align:center;
+    .product_pic{display:inline-block;background:url(../icon/loading2.gif) no-repeat center center;cursor:pointer;
+      &:after {content:'';display:block; width:33px; height:33px; position:absolute; top:0;right:0;}
+      img{display:block;
+        &::selection { background-color: transparent; }}
+    }
+    .zoom{max-height:@500px;max-width:@500px;display:inline-block;margin:@20px @100px;}
+    .view_icon{font-size:@14px;color:@c;padding:@40px 0 @10px 0;cursor:pointer;
+       i{width:20px;height:20px;.icon_02(-96px,0);margin-right:10px;display:inline-block;vertical-align:middle;}
+    }   
+  }
+  .product_info{
+    width:368px;.fr;
+    h3.tt{max-height:80px; overflow: hidden;font-size:@16px;color:@color333;line-height:@25px;}
+    .share_wrap{padding:@8px 0}
+  }
+}
+
+.star_wrap{padding:@10px 0;
+   .product_review{margin:0px;font-size:0;float:left;vertical-align:middle;display: inline-block;
+      i{width:22px;height:22px;font-size:20px;}
+   }
+   .review_data{line-height:20px;margin-left:@5px;}
+}
+.product_intro{
+   .scroll_wrap{width:100%;position:relative;height:@56px; overflow:hidden;
+      ul{position:absolute;min-width:@810px;overflow:scroll;}
+   }
+   .hd{border-bottom:1px solid @colorccc;
+      li{padding:@20px @40px;position:relative;font-size:@16px;cursor:pointer;
+         span{position:absolute;width:100%;height:2px;background:@c;left:0;bottom:0px;display:none}
+         &.active{
+           color:@c;
+           span{display:block}
+         }
+         &:hover{
+           color:@c;
+         }
+      }
+   }
+   .tab_info{display:none;}
+   .tab_info.show{display:block}
+   .faq .ask_btn{display:block;margin:0 auto;.main_btn;}
+   .bd{
+      .pro_detail{
+         article{
+           clear:both; zoom:1;
+           &:after{clear:both; display:block; height:0; font-size:0; content:"."; visibility:hidden;}
+           img{max-width:100% !important;height:auto !important;}
+         }
+      }
+      article{line-height:@25px;padding:@30px @15px;font-size:@14px;
+        h4{font-weight:bold}
+        p{margin-bottom:@30px;}
+        img{max-width:100% !important;height:auto}
+        .read_more_btn{.border;.borderRa;display: inline-block;padding:@10px @30px;}
+        .blueBtn{margin-bottom:@10px}
+      }
+      //faq
+      .faq_container{
+         li{margin-bottom:30px;}
+         p{margin-bottom:0 !important}
+         .que_wrap{margin-bottom:@10px}
+         .time{margin-left:12px;color:#999}
+      }
+      .review{
+         p{margin:0;color:@color999;}
+         li{margin-bottom:@30px}
+        } 
+      .review_time{span{margin-right:@15px;}}
+      .download{
+        h4{margin:@20px 0}
+        .andr_btn{margin-bottom:@15px}
+        article{
+          p:first-of-type{display:none;}
+        }
+      }
+      p.pdf{
+        i{display:inline-block;width:@23px;height:@30px;.icon_02(0,-48px);margin-right:@10px;vertical-align:middle;display:none;}
+        a{display:block;}
+      }
+      table{width:100%;
+        td{border-bottom:1px solid @colorccc;padding:@10px 0 @10px @50px;}
+        tr:nth-of-type(2n){background:@cf5}
+      }
+   }
+}
+.andr_icon,.ios_icon{
+  display:inline-block;line-height:@32px;padding:0 15px 0 8px;background:#9cbd36;.borderRa;color:#fff;width:@124px;
+  &:hover{color:#fff}
+  i{display:inline-block;width:19px;height:23px;.icon_02(-23px,-48px);margin-right:@5px;vertical-align: middle;}
+}
+.ios_icon{
+  background:#858585;
+  i{.icon_02(-41px,-48px);}
+}
+@media(max-width:320px)
+{//iPhone5
+  .product{
+   li{width:100%;}
+  }
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+   .tab_info{
+     .category_tt{padding:30px 0 20px;}
+   }
+   .tag_nav{
+    padding-top:10px;
+    ul{
+      li{font-size:@14px;color:@color333;padding:10px;}
+    }
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .banner{
+       li{
+        img{max-height:100%;width:auto;}
+       }
+    } 
+  .crumbs{padding:0 @15px;}
+  .product_swiper{position:relative;display:block;width:100%;padding:0;height:100%;
+    .banner li{background:none !important}
+        .close_btn{display:none}
+  }
+  .product_showcase{
+     .product_container,.product_left_bar{display:none}
+     .product_info{width:100%;float:none;padding:0 @15px;margin-top:@15px}
+  }
+  
+  
+} 
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+  #main .content{padding:@10px 0 0}
+
+}
+
+
+
+

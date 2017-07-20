@@ -1,0 +1,163 @@
+@import "../module_less/basis/b_var.less"; //变量集
+#main .content{padding:0 0 @30px;}
+//导航
+// .banner{height:@196px;
+//   a{display:block;height:100%;width:100%;}
+// }
+.banner{
+   .scroll_wrap{position: relative;}
+ }
+//国旗锚点导航
+// .flag_nav_container{position:fixed;width:@47px;right:@10px;top:46%;z-index:10;
+//     .tab_nav{width:100%;text-align:center;}
+//     li{width:100%;cursor:pointer;
+//            span{display:block;width:1px;height:@45px;position:relative;background:@colorccc;.fr;
+//              i{display: block;width:8px;height:8px;position:absolute;left:50%;top:50%;margin-top:-4px;margin-left:-4px;.border;border-radius: 50%;background:#fff}
+//            }
+//            img{width:@31px;height:@21px;margin-top:@13px}
+//     }
+//     li.active{
+//       span{i{border-color:@origin;background:@origin}}
+//     }
+// }
+//国旗锚点导航
+.flag_container{background:#f4f4f4;margin-top:@8px;
+  .flag_nav{display:table;margin:0 auto;padding-top:@20px;
+    li{width:@126px;
+      img{width:@50px;margin:0 auto;opacity:0.5;}
+      span{display:block;text-align:center;margin-top:@10px;margin-bottom:@16px;}
+      &.active{border-bottom:2px @c solid;img{opacity:1;}span{color:@c;}}
+    }
+  }
+}
+.flag_container_fix{display:none;
+    position:fixed;left:0;top:0;z-index:999;margin-top:0;width:100%;background:#fff;
+    opacity:.95;-webkit-box-shadow:2px 2px 4px rgba(0,0,0,.15);box-shadow:2px 2px 4px rgba(0,0,0,.15);
+    .flag_nav{display:table;margin:0 auto;padding-top:@16px;
+      li{width:@126px;
+        span{display:block;text-align:center;margin-top:@10px;margin-bottom:@20px;}
+      &.active{border-bottom:2px @c solid;img{opacity:1;}span{color:@c;}}
+      }
+    }
+  }
+.floor{
+  //标题
+  .target_fix{
+    position:relative;top:-80px;display:block;height:0;overflow:hidden;
+  }
+  .tt{padding:@15px 0;border-bottom:1px solid @colorccc;position:relative;}
+  .tag{
+      .hd{width:@92px;height:@92px;background:@cf5;border-radius:50%;position:relative;z-index:3;
+        i{display:block;position:absolute;width:@80px;height:@80px;padding:@6px;background:#fff;top:50%;left:50%;margin-left:-@40px;margin-top:-@40px;border-radius:50%;overflow:hidden;
+          img{width:100%;height:100%;border-radius:50%}
+        }
+      }
+      .bd{height:@64px;padding:0 @20px 0 @30px;background:@cf5;font-size:@28px;color:@color333;text-align:left;line-height:@65px;position: relative;left:-@16px;z-index:1;}
+      .ft{height:@64px;width:@10px;background:url(../icon/tag_tail.png) no-repeat left top;background-size:auto auto;position:relative;left:-@16px;}
+  }
+  .share{height:@20px;position:absolute;right:0;bottom:@15px;.fr}
+}
+//产品展示
+.product{
+   width:100%;
+   li{width:25%;padding:@10px 0;text-align:center;margin-bottom:@30px;
+     .product_img{position: relative;
+        .dis_tag{width:@70px;height:@70px;color:#fff;background:@origin;
+           position:absolute;right:@5px;top:@5px;border-radius: @70px;padding-top:18px;
+           span,i{display:block;font-size:@20px;}
+           i{margin-top:5px;font-size:16px}
+        }
+        a{display:block;padding:0 20px;min-height:100px;width:100%;
+          background:url('../icon/loading.gif') no-repeat center center;
+          img{width:100%;.animate;}
+        }
+     }
+     &:hover{
+       .product_img a{img{transform:translateY(-10px);-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);-o-transform:translateY(-10px);}
+       }
+     }
+     .info{text-align:left;padding:0 @20px;font-size:@14px;}
+     h3{padding:@10px 0;text-align:left;width:100%;height:@50px;overflow:hidden;font-size:@14px}
+     .price{
+       .origin_price{color:@color333;font-size:@12px;margin-right:@5px;text-decoration: line-through;}
+       .present_price{color:@origin;font-size:@24px;}
+     }
+     .coupon{margin-top:@8px;line-height:@28px;
+        p{color:@color333}
+        .copy_btn{height:@28px;padding:0 @20px;background:@origin;color:#fff;font-size:@14px;.fr;
+        }
+        em{color:@origin}
+        .coupon_val{width:10px;height:10px;opacity:0;filter:alpha(opacity=0);.fr}
+        .copyed{background:#ff944c;cursor:not-allowed}
+     }
+     .bt{margin-top:@8px;
+        p{color:@color999}
+        a.btn{display:block;width:100%;height:@42px;font-size:@16px;padding:0 @20px;background:#ffd778;text-align:center;color:@color333;margin-top:@10px;line-height: @42px;.borderRa;
+          &:hover{background:#f9c958}
+        }
+     }
+    }
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+   .tab_info{
+	   .category_tt{padding:30px 0 20px;}
+   }
+   .tag_nav{
+		padding-top:10px;
+		ul{
+			li{font-size:@14px;color:@color333;padding:10px;}
+		}
+   }
+   .flag_container{
+    .flag_nav{padding-top:@20px;
+      li{width:@100px;}
+    }
+  }
+  .flag_container_fix{
+    .flag_nav{padding-top:@10px;
+      li{width:@100px;}
+    }
+  }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  //html{font-size:16px;}
+  #main .content{padding:0 0 0;}
+  .floor{
+  //标题
+  .tag{
+      .hd{width:@62px;height:@62px;
+        i{width:@50px;height:@50px;padding:@6px;top:50%;left:50%;margin-left:-@25px;margin-top:-@25px;overflow:hidden;
+        }
+      }
+      .bd{height:@42px;padding:0 @20px 0 @30px;font-size:@18px;line-height:@42px;left:-@16px;}
+      .ft{height:@42px;width:@10px;background-size:auto 100%;}
+  }
+  .share{display:none}
+  }
+  .product{
+	 li{width:100%;
+     .product_img{
+        a{background-size:80% auto;}
+         .dis_tag{width:@50px;height:@50px;border-radius:@50px;padding-top:10px;
+           span,i{font-size:@16px;}
+           i{margin-top:2px;font-size:@14px}
+        }
+      }
+     .coupon{.copy_btn{display:none}}
+   }
+	}
+@media(max-width:320px)
+{//iPhone5
+  .product{
+   li{width:100%;}
+  }
+}
+}	
+
+
+
+
+
+

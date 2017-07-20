@@ -1,0 +1,42 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_fqa.less"; //常见问题
+@import "../module_less/module/m_form.less"; //表单元素
+#main .content{padding-bottom:@30px;}
+.banner{
+   .scroll_wrap{position: relative;}
+ }
+//分类导航
+.super_banner{background:url('../img/super_banner.jpg') no-repeat center center;height:@174px;line-height:@174px;text-align:center;color:#fff;font-size:@24px;
+}
+.container_wrap{padding:0 @15px}
+//说明信息
+.super_info{
+   padding-top:@30px;
+   p.p1{margin-bottom:@22px;line-height:22px;}
+   p.p2{margin-bottom:5px;}
+   ul{
+    margin-bottom:@22px;
+    li{padding-right:@10px;margin-bottom:@5px}
+   }
+}
+
+@media(max-width:320px)
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .super_info{margin-top:@24px;padding:@15px @15px 0;
+     ul{
+      li{width:100%;margin-bottom:@19px}
+     }
+  }
+}
+
+
+
+

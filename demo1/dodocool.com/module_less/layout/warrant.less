@@ -1,0 +1,104 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/module/m_form.less"; //form表单
+#main .content{padding-bottom:@30px;}
+.banner{
+  .scroll_wrap{position: relative;}
+  .scroll_container > img{max-height:150px;}
+ }
+//分类导航
+//分类导航
+.support_nav_bar{background:@cf3;
+  .support_center{text-align:center;padding:@55px 0;
+     h5{font-size:@30px;color:@color666;margin-right:@80px;line-height:@40px}
+     h5,.input_box{display:inline-block;vertical-align:middle;text-transform: uppercase;width:auto;}
+     .input_box{display:none;
+        .text{.border;border-right:none;width:@272px}
+        .submit_btn{width:38px;
+           i{font-size:@18px}
+        }
+     }
+  }
+  .scroll_wrap{position:relative;width:100%;height:@52px;overflow:hidden;}
+  .tab_nav{
+     position:absolute;
+     min-width:@519px;overflow:scroll;
+       li{position:relative;width:@170px;padding:@10px 0;text-align:center;cursor:pointer;border-bottom:2px solid @cf3;border-right:2px solid #fff;
+        &:last-of-type{border-right:none;}
+        a:before{content:'';width:100%;height:100%;position:absolute;left:0;top:0;}
+          span{display:inline-block;width:30px;height:30px; vertical-align: middle;margin-right:@5px}
+          &.li1{
+            span{.icon_02(-197px,0)}
+            &.active,&:hover{
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.li2{
+            span{.icon_02(-197px,-30px)}
+            &.active,&:hover{
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          &.li3{
+            span{.icon_02(-197px,-60px)}
+            &.active,&:hover{
+              border-bottom-color:@c;
+              background:#fff;
+            }
+          }
+          p{font-size:@12px;color:#000;display: inline-block;vertical-align:middle;}
+          &.active,&:hover{
+            p{color:#000;}
+          }
+       } 
+  }
+}
+.tag_nav{
+  padding-top:20px;
+  ul{
+    li{font-size:@14px;color:@color333;padding:20px;}
+  }
+}
+.tab_container{overflow:hidden;margin-top:@10px;}
+.tab_info{text-align:center;
+   .category_tt{display:inline-block;padding:50px 0 40px;
+      h3{font-size:@24px;color:@color333;}
+      p{padding:@10px 0}
+   }
+}
+.warr_banner{background:#0a99a9;height:@218px;line-height:@218px;text-align:center;color:#fff;font-size:@24px;
+}
+.container_wrap{padding:0}
+.message{
+   padding:@30px @30px 0;.border;.borderRa;margin-top:@48px;
+   ul{
+    li{width:50%;padding-right:@10px;margin-bottom:@38px;vertical-align:top}
+    h3{font-size:@18px;color:@color666;line-height:@25px}
+    p{padding:@10px 0;line-height:@25px;font-size:@12px}
+  }
+}
+.country_wrap{
+  .erro_info{padding-left:0 !important;}
+}
+@media(max-width:320px)
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .message{margin-top:@24px;padding:@15px @15px 0;
+     ul{
+      li{width:100%;margin-bottom:@19px}
+     }
+  }
+  
+}
+
+
+
+

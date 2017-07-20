@@ -1,0 +1,44 @@
+//  <li>
+//                <div class="product_img">
+//                   <a href="javascript:void(0)"><img src="img/pro_pic01.jpg" alt=""></a>
+//                   <span class="quick_view"><i></i>Quick view</span>
+//                </div>
+//                <h3><a href="javascript:void(0)">dodocool MFi Certified Ultrathin 2500mAh 
+// Portable Charger Backup </a></h3>
+               
+//             </li>
+//产品展示
+.product{
+   width:100%;
+   li{width:23.35%;padding:@15px 0px;text-align:center;margin-right:2.2%;margin-bottom:2.2%;border:1px solid #eee;
+     &:nth-of-type(4n){margin-right:0;}
+     .product_img{position: relative;
+       a{display:block;padding:0 20px;min-height:100px;width:100%; background:url('../icon/loading.gif') no-repeat center center;}
+       img{width:100%;.animate;}
+     }
+     &:hover{
+       .product_img{img{transform:translateY(-10px);-webkit-transform:translateY(-10px);-moz-transform:translateY(-10px);-ms-transform:translateY(-10px);-o-transform:translateY(-10px);}
+       .quick_view{display:block}
+     }
+     }
+     h3{margin-top:@10px;padding:0 @4px;text-align:center;width:100%;height:@40px;line-height:@20px; overflow:hidden;font-size:@14px}
+     p{margin-top:@16px;padding:0 @4px;font-size:@12px;text-align:center;width:100%;height:@60px;line-height:@20px; overflow:hidden;}
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .product{
+   li{width:49%;margin-right:2%;margin-bottom:2%;
+    &:nth-of-type(2n){margin-right:0;}
+     .product_img{a{background-size:80% auto;}
+       .quick_view{display:none !important}
+     }
+   }
+  }
+} 
+@media(max-width:320px)
+{//iPhone5
+  .product{
+   li{width:100%;margin-right:0;margin-bottom:1%;}
+  }
+}

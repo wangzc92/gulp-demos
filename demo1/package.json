@@ -1,0 +1,23 @@
+{
+  "name": "gulp-demo1",
+  "version": "1.0.0",
+  "description": "使用gulp处理css",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "css"
+  ],
+  "author": "wangzc92",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "yamljs": "^0.2.10"
+  }
+}

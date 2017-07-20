@@ -1,0 +1,19 @@
+# 页面拼装配置
+
+# dodocool首页
+index:
+  src: pages/index.html
+  css: index         #除去public之外的css
+  less:
+    - ./src/b_basis.less
+    - ./src/b_format.less
+  js:
+
+# 404页面   
+404:
+  src: pages/404.html
+  css: 404   
+  less:
+    - ./src/b_basis.less
+  js:
+    - acount

@@ -1,0 +1,42 @@
+//输入框和搜索框样式组件
+/*<div class="input_box lineBlockBox">
+      <input type="text" class="text" placeholder="Enter your Email">
+      <button type="button" class="submit_btn" >submit</button>.
+      <p class="erro_info">Please enter your email address.</p>
+  </div>
+*/
+.input_box{width:100%;height:@36px;line-height:@36px;
+      .text{width:@220px;height:@36px;background:#fff;padding:0 10px;border-radius:4px 0 0 4px;font-size:@12px;}
+      .sendE_btn{width:@80px;height:@36px;background:@color666;text-align:center;color:#fff;border-radius:0 4px 4px 0;font-size:@12px;
+        &:hover{background:@color333}
+      }
+      .submit_btn{width:@80px;height:@36px;background:@color666;text-align:center;color:#fff;border-radius:0 4px 4px 0;font-size:@12px;
+        &:hover{background:@color333}
+      }
+      &.erro{
+        .text{border-color:@erro}
+        textarea{border-color:@erro}
+      }
+      &.right{
+        .text{border-color:@c}
+        p{color:@c}
+      }
+      .erro_info{display:block;color:@erro;
+        
+      }
+}
+@media(max-width:960px){
+  .input_box{
+      .text{width:@170px;}
+      .sendE_btn{width:@70px;}
+      .submit_btn{width:@70px;}
+  }
+}
+@media(max-width:767px)
+{ //手机横屏与平板
+  .input_box{height:@36px;width:auto;
+      .text{width:@200px;}
+      .sendE_btn{width:@80px;}
+      .submit_btn{width:@80px;}
+  }
+}

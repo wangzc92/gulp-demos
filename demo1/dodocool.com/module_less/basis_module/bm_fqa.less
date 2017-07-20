@@ -1,0 +1,23 @@
+//fqa
+.fqa_wrap{
+   padding:@30px;
+   h3{font-size:@16px;padding:@10px 0;font-weight:bold;color:@color333;}
+   ul li{
+      p{line-height:25px;color:@color333;
+       &.question{line-height:35px;cursor:pointer;}
+       i{margin-left:@20px;color:@colorccc;display: inline-block;vertical-align: middle;.animate(0.4)}
+       &.question{font-weight:bold}
+      }
+      .answer{display:none;
+      }
+      &.on{
+        p{
+          i{transform:rotateZ(180deg);-webkit-transform:rotateZ(180deg);-moz-transform:rotateZ(180deg);-o-transform:rotateZ(180deg);-ms-transform:rotateZ(180deg)}
+        }
+      }
+   }
+}
+@media(min-width:320px) and (max-width:768px)
+{
+  .fqa_wrap{padding:0 @15px}
+}

@@ -1,0 +1,88 @@
+@import "../module_less/basis/b_var.less"; //变量集
+#main{border-top:none;}
+#main .content{padding:@8px 0 0;max-width:1920px;}
+#main .banner{max-width:none;}
+.banner{
+   .scroll_container{
+     .blank_img{max-width:1200px;}
+   }
+}
+//轮播小点样式调整
+// .scroll_container{
+//    .nav_btn{
+//       span{width:80px;max-width:60px;height:3px;border:none;margin:0 5px;border-radius:2px;background:#ccc;
+//       &:hover,&.active{background:@c}
+//       }
+//    }
+// }
+.product{display:table;width:100%;text-align:center;
+  .product_row{display:table-row;width:100%;
+    .product_item{display:table-cell;width:50%;border-bottom:@8px solid #fff;position:relative;
+      background-repeat:no-repeat;
+      background-size:1000px 600px;background-position:50% 0;
+      padding:@420px @30px @30px;vertical-align:bottom;
+      .text{vertical-align:baseline;
+        p{line-height:1.1;color:@color333;font-size:@14px;&:first-of-type{margin-bottom:@5px;color:#fff;background:@color333;display: inline-block;
+          padding: 4px 24px;border-radius:20px;font-size:@16px;}}
+        .prodcut_link{width:100%;height:100%;position:absolute;left:0;top:0;display:block;}
+      }
+      &:first-child{border-right:@8px solid #fff;}
+    }
+  }
+}
+@media(max-width:1440px)
+{
+.product{
+  .product_row{
+    .product_item{
+      background-size:720px 432px;padding:@302px @30px @20px;
+    }
+  }
+}
+}
+@media(max-width:960px)
+{
+.product{
+  .product_row{
+    .product_item{
+      background-size:500px 300px;padding:@210px @30px @20px;
+    }
+  }
+}
+}
+@media(max-width:768px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+  #main{border-top:@48px solid @color333;}
+  #main .content{padding:@4px 0 0;}
+}
+@media(max-width:640px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+.product{
+  .product_row{display:block;
+    .product_item{display:block;background-size:640px 384px;padding:@269px @30px @10px;
+      width:100%;border-bottom:@4px solid #fff;
+      &:first-child{border:none;border-bottom:@4px solid #fff;}
+      .text{
+        p{font-size:@12px;&:first-of-type{line-height:1;margin-bottom:2px;}}
+      }
+    }
+  }
+}
+}
+@media(max-width:414px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+.product{
+  .product_row{
+    .product_item{
+      background-size:414px 248px;padding:@174px @30px @10px;
+    }
+  }
+}
+  
+}
+
+
+

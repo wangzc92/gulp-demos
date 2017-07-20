@@ -1,0 +1,24 @@
+#main .content{padding-bottom:@30px;}
+.acount_container{//布局
+	position:relative;
+	margin-top:@20px;
+	.acount_nav{width:250px;}
+	.acount_right{margin-left:250px;border-left:22px solid #fff;background:#fff;min-height:@240px}
+}
+@media(max-width:1200px)
+{ //手机横屏与平板
+   .w{padding-left:@15px;padding-right:@15px}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  #main .content{padding-bottom:@10px}
+  .acount_container{//布局
+	margin-top:0;
+	background:#fff;
+	.acount_nav{width:100%;overflow:hidden;}
+	.acount_right{width:100%;padding:0 @15px;border:none;margin-left:0;background:#fff;}
+  }
+  .w{padding-left:0;padding-right:0}
+}
+ 
+

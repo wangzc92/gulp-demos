@@ -1,0 +1,35 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_acountlayout.less"; //会员中心布局
+@import "../module_less/module/m_acountNav.less"; //会员中心左侧
+.content_wrap{
+	.hd{font-size:@16px;padding:@20px;.border_b;}
+}
+.form_wrap{border:none;padding-top:0;margin-top:0}
+.order_list{//订单详情
+	li{padding:@20px;.border_b;position:relative;}
+	.info_wrap{
+	   .pic{width:@60px;height:@60px;.fl}
+	   .info{margin-left:@80px;padding-right:@60px;
+         h3{line-height:@20px;color:@color666;padding-bottom:@10px;font-size:@14px;max-height:45px;overflow:hidden;
+           & a{color:@color666;}
+         }
+         p{span{margin-right:@18px}}
+	   }
+	}
+	p.p1{padding-bottom:@18px;color:@color999;}
+	p.p2{padding-top:@18px;color:@color666;}
+	.tag{position:absolute;right:@20px;top:46%;
+      &.red{color:#f05a75}
+      &.green{color:#72d9c0}
+	}
+}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  .content_wrap{
+	.hd{display: none}
+  }
+  .order_list{
+	li{margin:0 -@15px}
+}
+}
+

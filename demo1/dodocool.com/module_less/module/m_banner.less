@@ -1,0 +1,61 @@
+.banner{
+   width:100%;
+   .blank_img{max-width:1200px;}
+   li{text-align:center;width:100%;float:left;
+	  img{max-width:100%;width:auto;display:inline-block;vertical-align:middle;}
+    // &:after{width:0;height:100%;font-size:0;vertical-align:middle; content:''; display:inline-block;}
+	}
+	.info_nav{display:inline-block;width:100%;margin-top:15%;
+       ul{width:100%;position:static;}
+	}
+	.info_nav li{float:none;height:auto;display:inline-block;width:auto;color:@c;margin:0 @5px @5px;background:none !important;*display:inline;}
+	.tt1{font-size:@38px;color:#069bb1;font-weight:bold;padding:@20px 0 @30px;display:inline-block;}
+	.tt2{font-size:@28px;color:#000;font-weight:bold;padding:0 0 @20px}
+}
+.scroll_container{width:100%;overflow:hidden;position:relative;
+   >img{}
+   ul{position:absolute;top:0;left:0;width:100%;height:100%;line-height:0;
+      li{float:left;width:100%;height:100%;position:relative;
+        a{width:100%;height:100%;display:block}
+      }
+   }
+   .nav_btn{position:absolute;bottom:3%;width:100%;text-align:center;z-index:2;
+      span{display:inline-block;width:@12px;height:@12px;border:1px solid #fff;margin:0 5px;border-radius:50%;color:#fff;color:red;*display:inline;*zoom:1;cursor:pointer;
+      &:hover,&.active{background:#fff;}
+      }
+   }
+   .pre_btn,.next_btn{width:100px;height:100%;position:absolute;top:0;cursor:pointer;display:none;opacity:0;.animate;z-index: 100;
+     span{width:48px;height:48px;position:absolute;.icon_02(0,0);top:50%;margin-top:-24px;cursor:pointer;display:block}
+   }
+   .pre_btn{left:0;
+      span{left:10px;}
+   }
+   .next_btn{right:0;
+      span{right:10px;.icon_02(-48px,0);}
+   }
+   &:hover .pre_btn,&:hover .next_btn{display:block;opacity:1;}
+   .close_btn{width:48px;height:48px;position:absolute;top:@20px;right:@20px;cursor:pointer;.icon_02(-116px,0); z-index: 100}
+}
+//swiper插件样式重置
+.swiper-container li{a{width:100%;height:100%;display: block}}
+.swiper-pagination-bullet{width:@20px;height:@20px;border:1px solid #fff;border-radius:@20px;background:none;opacity:1}
+.swiper-pagination-bullet-active{background:#fff;}
+@media(min-width:320px) and (max-width:768px)
+{ //手机横屏与平板
+  //html{font-size:16px;}
+  .banner {
+  	li{img.pic_bt{display:none}
+  	}
+  	.info_nav{margin-top:5%;
+  		li{width:40%;text-align:center}}
+  	.tt1{font-size:@18px;}
+	  .tt2{font-size:@16px;}
+  }
+  .scroll_container{
+       .pre_btn,.next_btn{display:none;}
+       &:hover .pre_btn,&:hover .next_btn{display:none;}
+       .nav_btn{
+        span{width:@6px;height:@4px;border-width:1px;margin:0 2px;border-radius:2px;}
+      }
+  }
+}

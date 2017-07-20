@@ -1,0 +1,118 @@
+@import "../module_less/basis/b_var.less"; //变量集
+@import "../module_less/basis_module/bm_fqa.less"; //常见问题
+@import "../module_less/module/m_form.less"; //表单元素
+@import "../module_less/module/m_youlike.less"; //你可能喜欢
+@import "../module_less/basis_module/bm_dialog.less"; //弹框样式
+@import "../module_less/module/m_login.less"; //登录
+#main .content{padding-bottom:@30px;}
+.banner{max-width:1200px;margin:0 auto;position:relative;
+    img{width:100%;}
+    .geeker_info{position:absolute;bottom:0;right:0;padding:@40px;width:50%;background:rgba(0,0,0,0.5);color:@colorccc;
+      h1{font-size:@30px;}
+      p{font-size:@14px;margin-top:@28px;}
+    }
+}
+.geeker_intro{
+  .scroll_wrap{width:100%;position:relative;height:@56px; overflow:hidden;
+      ul{position:absolute;min-width:@810px;overflow:scroll;}
+   }
+   .hd{border-bottom:1px solid @colorccc;
+      li{padding:@20px @40px;position:relative;font-size:@16px;cursor:pointer;
+         span{position:absolute;width:100%;height:2px;background:@c;left:0;bottom:0px;display:none}
+         &.active{
+           color:@c;
+           span{display:block}
+         }
+         &:hover{
+           color:@c;
+         }
+      }
+   }
+   .tab_info{display:none;height:300px;}
+   .tab_info.show{display:block}
+   .tab_info{
+    .youlike{
+      .leftArr{left:-12px;}
+      .rightArr{right:-12px;}
+      .productClass{
+        .productTitle{height:@34px;margin-top:@5px;white-space:normal;}
+      }
+    }
+    .noData{padding-top:@80px;
+      img{display:block;width:@60px;margin:0 auto;}
+      p{text-align:center;padding-top:@20px;}
+    }
+   }
+}
+.apply{
+  .apply_btn{
+    display:block;width:182px;height:36px;line-height:36px;text-align:center;background:#fff;
+    margin:0 auto;color:#000;font-size:@14px;border-radius:4px;border:1px solid #ccc;margin-top:@30px;
+    &:hover{border:1px solid #333;background:#333;color:#fff;}
+  }
+  .apply_success{
+    text-align:center;font-size:@14px;margin-top:@50px;color:@black;display:none;
+  }
+  .geeker_register{border:1px solid @colorccc;max-width:1200px;margin:0 auto;margin-top:@50px;display:none;
+    .content_wrap{
+      .hd{font-size:@16px;padding:15px;font-weight: bold;}
+    }
+    .form_wrap{border:none;padding-top:0;margin-top:0}
+  }
+}
+.bm_dialog_login{
+  .dialog{max-width:420px;min-height:470px;
+    .hd{border-bottom:none;padding:@28px;
+      p{overflow:visible;font-size:@8px;color:@color333;vertical-align: top;}
+      span{
+        font-size:@16px;cursor:pointer;margin:4px;color:@c;
+        &.act{
+           color:@color333;
+        }
+      }
+    }
+    .bd{min-height:0;overflow:hidden;max-height:360px !important;
+      .login_box{display:none;
+        &.show{display:block;}
+      }   
+    }
+  }
+}
+
+
+@media(max-width:320px)
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:480px) 
+{//iPhone5
+  
+}
+@media(min-width:320px) and (max-width:768px)
+{
+.banner{position:relative;
+    .geeker_info{position:relative;bottom:0;right:0;padding:@20px;width:100%;background:#f0f0f0;color:@color666;
+      h1{font-size:@30px;}
+      p{font-size:@14px;margin-top:@14px;}
+    }
+}  
+.bm_dialog_login{
+  .dialog{margin-top:@36px;
+    .bd{
+      .login_box{border-bottom:none;}
+    }
+  }
+}
+.apply{
+  .geeker_register{
+    .content_wrap{
+      .hd{display: none}
+    }
+  }
+}
+ .form_wrap .control_box .purchase_tips i{right:4px;top:1px;} 
+}
+
+
+
+

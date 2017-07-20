@@ -1,0 +1,57 @@
+//表单元素
+//复选框html结构
+// <span class="checkbox checkbox_checked"><i class="icon_check"></i></span>
+//复选框
+ .checkbox{display:inline-block;width:@16px;height:@16px;.border;.borderRa;vertical-align: middle;margin-right:@10px;cursor: pointer;text-align: center;line-height:@16px;color:#fff;font-size:@12px;
+      &.checkbox_checked{border-color:#333;background-color:#333;}
+      i{color:#fff}
+
+ }
+ //文本输入框
+ input.text{.border;height:@35px;padding:0 @10px;font-size:@12px;}
+.blueBtn{.borderRa;background:@c;color:#fff;padding:@10px @30px;font-size:@14px !important;
+   &:hover{background:#088999;color:#fff;}
+ }
+.defaultBtn{background:#fff;color:@color666;padding:@10px @30px;font-size:@14px !important;.border;
+}
+//单选框html结构
+// <div class="radio_wrap lineBlockBox">
+//     <div class="chooseOneBox">
+//       <label>
+//       <input name="sex" value="Females" type="radio">
+//       <div class="radio radioChecked"><i></i></div><em>male</em>
+//       </label>
+//     </div>
+//     <div class="chooseOneBox">
+//       <label>
+//       <input name="sex" value="Females" type="radio">
+//       <div class="radio"><i></i></div><em>Females</em>
+//       </label>
+//     </div>
+// </div>
+.chooseOneBox{margin-right:@10px;//单选框
+  label{width:auto !important;cursor:pointer;}
+  input{position:absolute;opacity:0;width:auto !important;}
+  .radio{width:@20px;height:@20px;border:1px solid @colorccc;border-radius:50%;margin-right:@10px;position:relative;font-size:@14px;text-align:center;
+      display:inline-block;*display: inline;*zoom:1;vertical-align:middle;
+  }
+  .radioChecked{border-width:@5px;border-color:#333;
+  }
+  .forbidChoice{
+    background:@colorccc;border-color:@colorccc;
+  }
+  .forbidCancel{
+    background:@colorccc;border-color:@colorccc;
+  }
+}
+
+@media(min-width:414px) and (max-width:768px)
+{ //手机横屏与平板
+	.blueBtn{background:@c;color:#fff;height:60px !important;font-size:@18px !important;}
+	.defaultBtn{height:60px !important;font-size:@18px !important;}
+}
+ @media(min-width:320px) and (max-width:414px)
+{ //手机横屏与平板
+	.blueBtn{height:48px !important;}
+	.defaultBtn{height:48px !important;}
+}
